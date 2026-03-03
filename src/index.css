@@ -1,24 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c4d9ff;
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #1a6bff;
+:root {
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
 }
 
 * {
+  font-family: var(--font-body);
   scrollbar-width: thin;
-  scrollbar-color: #c4d9ff transparent;
+  scrollbar-color: #1a6bff transparent;
 }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1a6bff; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #4d8fff; }
