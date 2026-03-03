@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -33,9 +34,11 @@ const Main = () => {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/*" element={<Main />} />
-    </Routes>
+    <ThemeProvider>
+      <Routes>
+        <Route path="/*" element={<Main />} />
+      </Routes>
+    </ThemeProvider>
   )
 }
 
